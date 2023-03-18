@@ -1,0 +1,151 @@
+@media (max-width: 575px) {
+  .desk-img {
+    display: none;
+  }
+  .mob-img {
+    display: block;
+  }
+}
+.mob-img {
+  display: none;
+}
+
+body {
+  background-image: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 400;
+}
+@media (max-width: 575px) {
+  body {
+    display: block;
+  }
+}
+body .parent {
+  position: relative;
+}
+body .parent img.box {
+  z-index: 3;
+  position: absolute;
+  left: -90px;
+  top: 50%;
+  transform: translateY(-27%);
+}
+body .container {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 850px;
+  height: 450px;
+  gap: 20px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 575px) {
+  body .container {
+    flex-direction: column;
+    margin-top: 120px;
+    height: 100%;
+    width: calc(100% - 40px);
+    overflow: visible;
+  }
+}
+body .container .img {
+  flex: 1;
+  height: 100%;
+}
+@media (max-width: 575px) {
+  body .container .img {
+    margin-bottom: 50px;
+  }
+  body .container .img .desk-img {
+    display: none;
+  }
+  body .container .img .mob-img {
+    display: block;
+  }
+  body .container .img .m-woman {
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  body .container .img .m-bat {
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+body .container .img img:not(img.woman) {
+  position: absolute;
+}
+body .container .img img.bat {
+  z-index: 1;
+  left: -60%;
+  top: -50%;
+}
+body .container .img img.woman {
+  position: absolute;
+  z-index: 2;
+  left: -80px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+body .container .qust {
+  flex: 1;
+}
+body .container .qust h1 {
+  font-weight: 700;
+}
+@media (max-width: 575px) {
+  body .container .qust h1 {
+    text-align: center;
+  }
+}
+body .container .qust ul {
+  list-style-type: none;
+  padding: 0;
+  width: 350px;
+}
+@media (max-width: 575px) {
+  body .container .qust ul {
+    max-width: 100%;
+  }
+}
+body .container .qust ul li {
+  padding: 15px 0;
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+body .container .qust ul li p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px;
+  font-size: 15px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+body .container .qust ul li p.active {
+  font-weight: 700;
+}
+body .container .qust ul li p.active img {
+  transform: rotate(180deg);
+}
+body .container .qust ul li p:hover {
+  color: hsl(14, 88%, 65%);
+}
+body .container .qust ul li p img {
+  transition: 0.2s;
+  margin-right: 10px;
+}
+body .container .qust ul li span {
+  font-size: 13px;
+  color: hsl(240, 6%, 50%);
+  display: none;
+  margin-top: 10px;
+}/*# sourceMappingURL=style.css.map */
